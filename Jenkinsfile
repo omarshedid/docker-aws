@@ -21,8 +21,12 @@ pipeline{
 
 
   stage("Push Image"){
+      environment{
+          DOCKER_HUB=credentials('dockerhub-creds')
+      }
   steps{
-        sh "docker push -t=omarpixelogic/docker-aws"
+        sh 'echo ${DOCKER_HUB_PSW} | docker login -u ${DOCKER_HUB_USR} --password-stdin '
+        sh "docker push omarpixelogic/docker-aws"
 
   }
     }
@@ -30,8 +34,8 @@ pipeline{
 
    post{
    always{
+       sh "docker logout"
 
-archiveArtifacts artifacts: 'index.html', followSymlinks: false
    }
    }
 
