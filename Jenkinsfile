@@ -37,7 +37,8 @@ pipeline{
    post{
    always{
        sh "docker logout"
-
+       archiveArtifacts artifacts: './result/flight-reservation/emailable-report.html', followSymlinks: false
+       archiveArtifacts artifacts: './result/vendor-portal/emailable-report.html', followSymlinks: false
    }
    }
 

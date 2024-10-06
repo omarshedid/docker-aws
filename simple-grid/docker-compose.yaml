@@ -41,7 +41,7 @@ services:
     depends_on:
       - firefox
     volumes:
-      - ${PWD}/result2:/test-output
+      - ${PWD}/result/vendor-portal:/home/docker-course/test-output
     environment:
       - SELENIUM_GRID_ENABLED=true
       - TEST_SUITE=vendor-portal.xml
@@ -53,7 +53,7 @@ services:
     depends_on:
       - firefox
     volumes:
-      - ${PWD}/result2:/test-output
+      - ${PWD}/result/flight-reservation:/home/docker-course/test-output
     environment:
       - SELENIUM_GRID_ENABLED=true
       - TEST_SUITE=flight-reservation.xml
