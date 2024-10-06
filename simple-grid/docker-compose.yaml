@@ -36,7 +36,7 @@ services:
       - SE_NODE_MAX_SESSIONS=7
       - SE_VNC_NO_PASSWORD=1
   vendor-portal:
-    image:  omarpixelogic/dockerimage
+    image:  omarpixelogic/docker-aws
     shm_size: '2g'
     depends_on:
       - firefox
@@ -48,7 +48,7 @@ services:
       - THREAD_COUNT=3
       - HUB_HOST=hub
   flight-reservation:
-    image: omarpixelogic/dockerimage
+    image:  omarpixelogic/docker-aws
     shm_size: '2g'
     depends_on:
       - firefox
