@@ -30,6 +30,13 @@ pipeline{
 
   }
     }
+        stage("Propagate runner build"){
+        steps{
+        build propagate: false, job: 'DOCKER_SELENIUM_RUNNER', parameters: [string(name: 'BROWSER', value: 'chrome')]
+
+        }
+          }
+
 }
 
    post{
