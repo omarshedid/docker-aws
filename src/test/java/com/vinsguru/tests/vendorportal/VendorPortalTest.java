@@ -43,6 +43,7 @@ public class VendorPortalTest extends AbstractTest {
 
         // order history search
         dashboardPage.searchOrderHistoryBy(testData.searchKeyword());
+        System.out.println(testData.searchResultsCount());
         Assert.assertEquals(dashboardPage.getSearchResultsCount(), testData.searchResultsCount());
     }
 
