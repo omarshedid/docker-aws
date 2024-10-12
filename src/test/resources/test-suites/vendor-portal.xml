@@ -15,7 +15,7 @@
         </classes>
     </test>
     <test name="user-john">
-        <parameter name="testDataPath" value="test-data/vendor-portal/mike.json" />
+        <parameter name="testDataPath" value="test-data/vendor-portal/john.json" />
         <parameter name="browser" value="firefox"/>
         <classes>
             <class name="com.vinsguru.tests.vendorportal.VendorPortalTest"/>
